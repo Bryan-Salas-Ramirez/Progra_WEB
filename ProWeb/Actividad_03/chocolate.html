@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <header>
+        <h1 style="padding-left: 10%;">Cafetería (¡Mi primera chamba!)</h1>
+        <hr width="85%" >
+        <p  style="font-size: x-large; padding-left: 10%;"><a href="index.html" style="text-decoration: none; color: rgb(28, 75, 11);">Inicio</a> / Bebidas / <b><i>Chocolate</i></b></p>
+        <hr width="85%">
+    </header>
+
+    <main>
+        <!-- Foto del producto -->
+        <center><img src="Chocolate.png" width="20%" alt="Imagen chocolate caliente"></center>
+        <hr width="85%">
+        <!-- Descripción del producto -->
+        <p style="font-size: larger; padding-left: 30%; padding-right: 30%; text-align: center;">Disfruta de un chocolate caliente premium, elaborado con cacao de alta calidad y leche cremosa. Perfectamente balanceado, disponible en sabores únicos y tamaños ideales para consentirte en cualquier momento. ¡Calidad y sabor en cada sorbo!</p>
+        <hr width="85%">
+        <!-- Elección de tamaño del producto -->
+        <label style="font-size: x-large; padding-left: 47%; color: rgb(172, 121, 58);"><b>Tamaño</b></label>
+        <br>
+        <label for="chico" style="font-size: larger; padding-left: 41%;"><b>Chico:</b> 250ml &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Precio:</b> $45 MXN</label>
+        <input type="radio" name="tamaño" id="chico">
+        <br>
+        <label for="mediano" style="font-size: larger; padding-left: 41%;"><b>Mediano:</b> 350ml &nbsp; <b>Precio:</b> $55 MXN</label>
+        <input type="radio" name="tamaño" id="mediano">
+        <br>
+        <label for="grande" style="font-size: larger; padding-left: 41%;" ><b>Grande:</b> 450ml &nbsp;&nbsp;&nbsp; <b>Precio:</b> $65 MXN</label>
+        <input type="radio" name="tamaño" id="grande">
+        <br>
+        <!-- Elección del sabor del producto -->
+        <p style="font-size: x-large; padding-left: 47.5%; color: rgb(172, 121, 58);"><b>Sabor</b></p>
+        <label for="clasico" style="font-size: larger; padding-left: 36%;">Clásico</label>
+        <input type="radio" name="sabor" id="clasico">
+        <label for="vainilla" style="font-size: larger;">Vainilla</label>
+        <input type="radio" name="sabor" id="vainilla">
+        <label for="canela" style="font-size: larger;">Canela</label>
+        <input type="radio" name="sabor" id="canela">
+        <label for="menta" style="font-size: larger;">Menta</label>
+        <input type="radio" name="sabor" id="menta">
+        <label for="naranja" style="font-size: larger;">Naranja</label>
+        <input type="radio" name="sabor" id="naranja">
+        <label for="chile" style="font-size: larger;">Chile</label>
+        <input type="radio" name="sabor" id="chile">
+        <br>
+        <!-- Elegir la cantidad de productos -->
+        <p style="font-size: x-large; padding-left: 47%; color: rgb(172, 121, 58);"><b>Cantidad</b></p>
+        <label for="cantidad" style="font-size: larger; padding-left: 46%;"><b>Piezas</b></label>
+        <select name="cantidad" id="cantidad">
+            <option value="1">1 vaso</option>
+            <option value="2">2 vasos</option>
+            <option value="3">3 vasos</option>
+            <option value="4">4 vasos</option>
+            <option value="5">5 vasos</option>
+        </select>
+        <!-- Botón para proceder al pago -->
+        <hr width="85%">
+        <center><input type="button" style="font-size: x-large;" value="Proceder con el Pago"></center>
+
+
+    </main>
+
+</body>
+</html>

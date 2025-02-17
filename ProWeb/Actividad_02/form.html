@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Práctica con formulario</h1>
+
+    <!-- Esto es un comentario -->
+    <!-- Breadcrums, migas de pan, marca donde estás ay a dónde vas -->
+    <h6><a href="index.html">Home</a>  /  Contacto</h6>
+    <hr>
+
+    <form>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" placeholder="nombre" required>
+
+        <!-- Placeholder, readonly, required -->
+
+        <!-- <input type="color" name="" id="">
+        <input type="date" name="" id="">
+        <input type="time" name="" id="">
+        <input type="file" name="" id=""> -->
+
+        <hr>
+        <label for="">Correo: </label>
+        <input type="email" name="email" id="email">
+        <hr>
+        <label for="pais">País: </label>
+        <select name="pais" id="pais">
+            <option value="1">México</option>
+            <option value="1">Argentina</option>
+            <option value="1">Canada</option>
+            <option value="1">Alaska</option>
+        </select>
+        <hr>
+            <!-- Se ponen nombres distintos porque se pueden seleccionar varios -->
+            <label for="deporte">Deporte: </label><br>
+            <input type="checkbox" name="Soccer" id="Futbol"> Futbol
+            <input type="checkbox" name="Tenis" id="Tenis"> Tenis
+            <input type="checkbox" name="Natación" id="Natación"> Natación
+        <hr>
+        <!-- Se ponen nombres iguales porque sólo se vincula una opción al final -->
+            <label> Sexo: </label>
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="sexo" id="sexo" value="Hombre">
+            <label for="mujer">Mujer</label>
+            <input type="radio" name="sexo" id="sexo" value="Mujer">
+            <label for="otro">Otro</label>
+            <input type="radio" name="sexo" id="sexo" value="Otro">
+        <hr>
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password">
+        <hr>
+            <label for="volumen">Ajustar volumen</label>
+            <input type="range" name="volumen" id="volumen" min="1" max="10" step="1">
+        <hr>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
