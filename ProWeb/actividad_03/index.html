@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+    <h1>Práctica con Tablas</h1>
+
+    <!-- Esto es un comentario -->
+    <!-- Breadcrums, migas de pan, marca donde estás ay a dónde vas -->
+    <h6>Home  /  <a href="form.html">Contacto</a></h6>
+
+    <h3>Reporte de ventas</h3>
+    <hr>
+    <table border="1" >
+        <!-- Encabezado de la tabla -->
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <!-- Cuerpo de la tabla -->
+        <tbody>
+            <tr>
+                <td>Manzana</td>
+                <td>5</td>
+                <td>$10</td>
+                <td>$50</td>
+            </tr>
+            <tr>
+                <td>Plátano</td>
+                <td>10</td>
+                <td>$1</td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Naranja</td>
+                <td>10</td>
+                <td>$10</td>
+                <td>$100</td>
+            </tr>
+        </tbody>
+        <!-- Pide de tabla -->
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Total de ventas</strong></td>
+                <!-- rowspan para filas, abarcan más de un lugar -->
+                <td><strong>$160</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
