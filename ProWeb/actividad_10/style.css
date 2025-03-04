@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+}
+
+body{
+    margin: 0 250px 0 250px;
+}
+
+button{
+    border: transparent;
+    font-size: large;
+    background-color: transparent;
+    color: white;
+}
+
+#centro{
+    width: 58%;
+    margin: 0 20px 0 20px;
+    justify-content: space-between;
+}
+
+.columnader{
+    background-color: #1BC2CF;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.descripcion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#derecha{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    border: solid #1BC2CF;
+    padding: 15px;
+}
+
+.fecha{
+    font-size: small;
+    color: gray;
+}
+
+footer{
+    background-color: #f1f1f182;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+h1{
+    width: 80px;
+}
+
+h2{
+    color: #f1a822;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h3{
+    padding: 8px 0;
+}
+
+hr{
+    width: 100%;
+    background-color: #E4E4E4;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px 5px 10px;
+}
+
+img{
+    width: 28%;
+    margin-right: 15px;
+}
+
+input{
+    width: 130px;
+    height: 13px;
+}
+
+#izquierda{
+    width: 19%;
+    display: flex;
+    padding-left: 5px;
+    flex-direction: column;
+}
+
+.links{
+    background-color: #cac8c8;
+    width: 200px;
+    padding: 5px 0 5px 10px; 
+    margin-bottom: 3px;
+}
+
+main{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    overflow: hidden;
+}
+
+.menu{
+    height: 50px;
+    font-weight: 100;
+    padding: 0 150px 0 150px;
+    margin-bottom: 15px;
+    background-color: #D95A67;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    clear: both;
+}
+
+#noticias{
+    background-color: #F1F1F1;
+    padding: 0 10px 20px 10px;
+    margin-bottom: 20px;
+    border: solid #E4E4E4;
+}
+
+#publicidad{
+    background-color: #FDEACD;
+    padding: 0 10px 20px 10px;
+    border: dashed #f1a822;
+}
+
+.seguir{
+    margin-top: 15px;
+    color: #BC9639;
+    margin-bottom: 10px;
+}
+
+.titulonoti{
+    color: #3C6C60;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: medium;
+}
+
+#titulopubli{
+    font-size: larger;
+    color: #f1a822;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
