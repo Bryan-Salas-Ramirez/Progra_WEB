@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid_Ej_03</title>
+    <style>
+        a{
+        text-decoration: none;
+        color: inherit;
+        }
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            height: 885px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+            /* 1        2       3       4        5     6       7       8        9       10      11      12      13      14      15      16      17      18      19      20      21      22         */
+            " apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple aorange aorange"
+            " apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple apurple aorange aorange"
+            " aorange2 aorange2 aorange2 agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen aorange aorange"
+            " aorange2 aorange2 aorange2 agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen agreen aorange aorange"
+            " aorange2 aorange2 aorange2 ablue ablue ablue ablue ablue ablue ablue ablue ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 aorange aorange"
+            " aorange2 aorange2 aorange2 ablue ablue ablue ablue ablue ablue ablue ablue ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 aorange aorange"
+            " aorange2 aorange2 aorange2 ablue ablue ablue ablue ablue ablue ablue ablue ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 aorange aorange"
+            " aorange2 aorange2 aorange2 ablue ablue ablue ablue ablue ablue ablue ablue ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 ablue2 aorange aorange"
+            " aorange2 aorange2 aorange2 alightpurple alightpurple alightpurple alightpurple2 alightpurple2 alightpurple2 ared ared ared ared alightpurple3 alightpurple3 alightpurple3 alightpurple4 alightpurple4 alightpurple4 aorange aorange"
+            " aorange2 aorange2 aorange2 alightpurple alightpurple alightpurple alightpurple2 alightpurple2 alightpurple2 ared ared ared ared alightpurple3 alightpurple3 alightpurple3 alightpurple4 alightpurple4 alightpurple4 aorange aorange"
+            " aorange2 aorange2 aorange2 alightpurple alightpurple alightpurple alightpurple2 alightpurple2 alightpurple2 ared ared ared ared alightpurple3 alightpurple3 alightpurple3 alightpurple4 alightpurple4 alightpurple4 aorange aorange"
+            " aorange2 aorange2 aorange2 alightpurple5 alightpurple5 alightpurple5 alightpurple6 alightpurple6 alightpurple6 ared2 ared2 ared2 ared2 alightpurple7 alightpurple7 alightpurple7 alightpurple8 alightpurple8 alightpurple8 aorange aorange"
+            " aorange2 aorange2 aorange2 alightpurple5 alightpurple5 alightpurple5 alightpurple6 alightpurple6 alightpurple6 ared2 ared2 ared2 ared2 alightpurple7 alightpurple7 alightpurple7 alightpurple8 alightpurple8 alightpurple8 aorange aorange"
+            " aorange2 aorange2 aorange2 alightpurple5 alightpurple5 alightpurple5 alightpurple6 alightpurple6 alightpurple6 ared2 ared2 ared2 ared2 alightpurple7 alightpurple7 alightpurple7 alightpurple8 alightpurple8 alightpurple8 aorange aorange"
+            ;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            display: grid;
+            grid-template-columns: 70px 1fr 1fr 1fr 6fr 130px;
+            background-color: #E4EEF4;
+        }
+        .home{
+            background-color: rebeccapurple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ball{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 8px;
+        }
+        .min{
+            background-color: yellow;
+        }
+        .max{
+            background-color: green;
+        }
+        .out{
+            background-color: red;
+        }
+        .window{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-right: 10px;
+        }
+        .Ej_01{
+            background-color: rgba(97, 166, 23, 0.751);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: white;
+            border-radius: 40px;
+            margin: 5px 15px;
+            
+        }
+        .Ej_02{
+            background-color: rgba(97, 166, 23, 0.751);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: white;
+            border-radius: 40px;
+            margin: 5px 15px;
+        }
+        .Ej_03{
+            background-color: rgb(97, 166, 23);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: white;
+            border-radius: 40px;
+            margin: 5px 15px;
+            pointer-events: none;
+        }
+        .box{
+            border: solid 7px white;
+        }
+        .purple{
+            background-color: #8D43B4;
+            grid-area: apurple;
+            margin-top: 7px;
+            margin-left: 7px;
+        }
+        .blue{
+            background-color: #42A6EC;
+            grid-area: ablue;
+        }
+        .blue2{
+            background-color: #42A6EC;
+            grid-area: ablue2;
+        }
+        .red{
+            background-color: #E84E34;
+            grid-area: ared;
+        }
+        .red2{
+            background-color: #E84E34;
+            grid-area: ared2;
+        }
+        .green{
+            background-color: #2AA650;
+            grid-area: agreen;
+        }
+        .lightpurple{
+            background-color: #AC85B4;
+            grid-area: alightpurple;
+        }
+        .lightpurple2{
+            background-color: #AC85B4;
+            grid-area: alightpurple2;
+        }
+        .lightpurple3{
+            background-color: #AC85B4;
+            grid-area: alightpurple3;
+        }
+        .lightpurple4{
+            background-color: #AC85B4;
+            grid-area: alightpurple4;
+        }
+        .lightpurple5{
+            background-color: #AC85B4;
+            grid-area: alightpurple5;
+        }
+        .lightpurple6{
+            background-color: #AC85B4;
+            grid-area: alightpurple6;
+        }
+        .lightpurple7{
+            background-color: #AC85B4;
+            grid-area: alightpurple7;
+        }
+        .lightpurple8{
+            background-color: #AC85B4;
+            grid-area: alightpurple8;
+        }
+        .orange{
+            background-color: #F89929;
+            grid-area: aorange;
+            margin-right: 7px;
+            margin-top: 7px;
+        }
+        .orange2{
+            background-color: #F89929;
+            grid-area: aorange2;
+            margin-left: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="home"><a href=""><img src="Homeblue.png" width="25" style="padding-left: 15%;" alt="Icono de inicio"></a></div>
+        <div class="Ej_01"><a href="ejercicio_01.html">Ejercicio 1</a></div>
+        <div class="Ej_02"><a href="ejercicio_02.html">Ejercicio 2</a></div>
+        <div class="Ej_03"><a href="">Ejercicio 3</a></div>
+        <div></div>
+        <div class="window">
+            <div class="ball min"></div>
+            <div class="ball max"></div>
+            <div class="ball out"></div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="box purple"></div>
+        <div class="box blue"></div>
+        <div class="box blue2"></div>
+        <div class="box red"></div>
+        <div class="box red2"></div>
+        <div class="box green"></div>
+        <div class="box lightpurple"></div>
+        <div class="box lightpurple2"></div>
+        <div class="box lightpurple3"></div>
+        <div class="box lightpurple4"></div>
+        <div class="box lightpurple5"></div>
+        <div class="box lightpurple6"></div>
+        <div class="box lightpurple7"></div>
+        <div class="box lightpurple8"></div>
+        <div class="box orange"></div>
+        <div class="box orange2"></div>
+    </div>
