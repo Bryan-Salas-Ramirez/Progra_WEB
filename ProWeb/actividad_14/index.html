@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a href="../"><img src="Home_blue.png" width="30px" id="casa" class="m-4" alt="Imagen casa azul"></a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <h1 class="title is-1 is-spaced has-text-centered is-family-primary">¡Formulario Genial!</h1>
+    <form class="container box" action="procesar.php" method="post">
+        <div class="field">
+            <label for="nombre" class="label is-success">Nombre</label>
+            <div class="control">
+                <input id="nombre" name="nombre" class="input" type="text" placeholder="Juan" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="apellido" class="label">Apellido</label>
+            <div class="control">
+                <input id="apellido" name="apellido" class="input" type="text" placeholder="Pérez" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="edad" class="label">Edad</label>
+            <div class="control">
+                <input id="edad" name="edad" class="input" type="text" placeholder="45" required>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input id="emai" name="email" class="input" type="text" placeholder="gatito13@hotmail.es" value="" required>
+            </div>
+        </div>
+        <div class="is-flex is-justify-content-center">
+            <input id="subir" name="subir" class="button is-success is-outlined is-rounded" type="submit" value="Subir">
+        </div>
+    </form>
+</body>
+</html>
