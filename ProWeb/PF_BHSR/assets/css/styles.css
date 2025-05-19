@@ -1,0 +1,1098 @@
+/* Estilos generales */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #2C3E50;
+    --accent-color: #E74C3C;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #ddd;
+    --header-color: #2C5364;
+    --menu-width: 250px;
+    --header-height: 64px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* ===== ESTILOS DE LOGIN Y REGISTRO ===== */
+body.login-page,
+body.register-page {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+/* Estilos del header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    z-index: 30;
+    background-color: #363636;
+    padding: 1rem;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
+    color: var(--primary-color);
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .header-nav.is-active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+/* Estilos del sidebar */
+.sidebar {
+    width: 280px;
+    height: calc(100vh - 64px); /* Altura total menos el header */
+    background-color: white;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+    position: fixed;
+    left: 0;
+    top: 64px; /* Altura del header */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Sección del usuario */
+.user-section {
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.user-name {
+    color: #2C5364;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: block;
+}
+
+.separator {
+    height: 2px;
+    background-color: #2C5364;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Secciones del menú */
+.menu-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    background-color: #2C5364;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #2C5364;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Sección de cerrar sesión */
+.logout-section {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #2C5364;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #f5f5f5;
+}
+
+.logout-button i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Ajuste del contenido principal para el sidebar */
+.main-content {
+    margin-left: var(--menu-width);
+    margin-top: var(--header-height);
+    padding: 2rem;
+    min-height: calc(100vh - var(--header-height));
+    width: calc(100% - var(--menu-width));
+    box-sizing: border-box;
+}
+
+/* Sección izquierda con gradiente y elementos decorativos */
+.left-section {
+    width: 60%;
+    background: linear-gradient(to bottom, #2C5364, #FFFFFF);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Estilos para el logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.left-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.left-section p {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Círculo decorativo con efecto X */
+.circle {
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background-color: #2C5364;
+    border-radius: 50%;
+    border: 2px solid #2C5364;
+}
+
+/* Líneas que forman la X sobre el círculo */
+.circle::before,
+.circle::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    border-radius: 2px;
+}
+
+.circle::before {
+    transform: rotate(45deg) translateY(-50%);
+}
+
+.circle::after {
+    transform: rotate(-45deg) translateY(-50%);
+}
+
+/* Sección derecha con el formulario de registro/login */
+.right-section {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+}
+
+/* Contenedores de formularios */
+.register-container,
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-container h2,
+.login-container h2 {
+    color: var(--header-color);
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para las etiquetas de los campos */
+.label {
+    color: var(--header-color) !important;
+    font-weight: 600;
+}
+
+/* Contenedor del campo de contraseña con icono de visibilidad */
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--header-color);
+}
+
+/* Estilos para los botones */
+.register-button1,
+.login-button1 {
+    background-color: var(--header-color) !important;
+    color: white !important;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.register-button2 {
+    background-color: white !important;
+    color: var(--header-color) !important;
+    border: 2px solid var(--header-color) !important;
+    width: 100%;
+}
+
+/* Estilos para el texto de cuenta existente */
+.existing-account {
+    text-align: center;
+    color: var(--header-color);
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+/* Estilos para el divisor con la letra 'o' */
+.divider {
+    text-align: center;
+    margin: 1rem 0;
+    position: relative;
+    color: var(--header-color);
+    font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* ===== ESTILOS DEL DASHBOARD ===== */
+body.dashboard-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--light-gray);
+}
+
+/* Estilos del menú */
+.menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    width: var(--menu-width);
+    background-color: #2c3e50;
+    padding: 1.5rem;
+    overflow-y: auto;
+    z-index: 20;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.menu-label {
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin-bottom: 0.5rem;
+}
+
+.menu-list a {
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.menu-list a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+.menu-list a.is-active {
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.menu-list a .icon {
+    width: 20px;
+    text-align: center;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section .subtitle {
+    color: #7f8c8d;
+}
+
+/* Grid del dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin: 0;
+    text-align: center;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Elementos de resumen */
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.summary-item i {
+    font-size: 2rem;
+    color: #3498db;
+}
+
+.summary-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.summary-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Tablas */
+.table-container {
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    padding: 1rem;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Botones */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Notificaciones */
+.notification {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    :root {
+        --menu-width: 200px;
+    }
+
+    .main-content {
+        margin-left: var(--menu-width);
+        width: calc(100% - var(--menu-width));
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    :root {
+        --menu-width: 0px;
+    }
+
+    .menu {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Estilos para la página de hábitos */
+.no-habits-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.no-habits-message h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.no-habits-message p {
+    text-align: center;
+    color: #666;
+}
+
+.habits-chart-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 400px;
+}
+
+.habits-list {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.habit-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.habit-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.category-tag {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.habit-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.habit-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.progress-bar {
+    background: #f0f0f0;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.progress {
+    background: var(--primary-color);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.no-habits-message {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.no-habits-message h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.no-habits-message p {
+    text-align: center;
+    color: #666;
+}
+
+/* Ajustes responsivos para la página de hábitos */
+@media screen and (max-width: 768px) {
+    .habits-list {
+        padding: 0 0.5rem;
+    }
+
+    .habit-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .habits-chart-container {
+        height: 300px;
+        margin: 1rem;
+    }
+}
+
+/* Estilos para las categorías de hábitos */
+.category-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    color: #2C5364;
+}
+
+.category-title.salud {
+    background-color: #4CAF50;
+}
+
+.category-title.ejercicio {
+    background-color: #2196F3;
+}
+
+.category-title.estudio {
+    background-color: #9C27B0;
+}
+
+.category-title.productividad {
+    background-color: #FF9800;
+}
+
+.category-title.mental {
+    background-color: #E91E63;
+}
+
+.category-title.otro {
+    background-color: #607D8B;
+}
+
+/* Estilos para los nombres de hábitos */
+.habit-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Estilos para el botón de incremento */
+.increment-button {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.increment-button:hover {
+    transform: translateY(-2px);
+}
+
+.increment-button i {
+    font-size: 1.2rem;
+}
+
+/* Ajustes para la barra de progreso */
+.progress-bar {
+    margin-top: 1rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    background: var(--primary-color);
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+/* Estilos para la gestión de hábitos */
+.habit-item {
+    padding: 1rem;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.habit-item:last-child {
+    border-bottom: none;
+}
+
+.habit-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.habit-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.habit-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #363636;
+    margin-bottom: 0.25rem;
+}
+
+.habit-description {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.habit-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.habit-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.habit-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.habit-actions .button.is-info {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.habit-actions .button.is-info:hover {
+    background-color: #357ABD;
+}
+
+.habit-actions .button.is-danger {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.habit-actions .button.is-danger:hover {
+    background-color: #C0392B;
+}
+
+/* Estilos para el modal de edición */
+.modal-card {
+    max-width: 500px;
+    width: 100%;
+}
+
+.modal-card-body {
+    padding: 1.5rem;
+}
+
+.modal-card-foot {
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* Estilos para la página de historial de hábitos */
+.filters-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filters-section .field {
+    margin-bottom: 0;
+}
+
+.filters-section .label {
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.filters-section .select {
+    width: 100%;
+    max-width: 300px;
+}
+
+.filters-section .select select {
+    width: 100%;
+}
+
+/* Estilos para las tarjetas de historial */
+.habit-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-2px);
+}
+
+.habit-card .habit-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.habit-card .habit-info {
+    flex: 1;
+}
+
+.habit-card .habit-name {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.habit-card .habit-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.habit-card .habit-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.habit-card .tag {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+}
+
+.habit-card .tag.is-light {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+/* Responsive para la página de historial */
+@media screen and (max-width: 768px) {
+    .filters-section {
+        margin: 1rem;
+    }
+
+    .filters-section .select {
+        max-width: 100%;
+    }
+
+    .habit-card {
+        margin: 1rem;
+    }
+
+    .habit-card .habit-details {
+        flex-direction: column;
+    }
+
+    .habit-card .tag {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Estilos para la página de edición de perfil */
+.profile-edit-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-form .field {
+    margin-bottom: 1.5rem;
+}
+
+.profile-form .label {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.profile-form .input {
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+
+.profile-form .input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.125em rgba(74, 144, 226, 0.25);
+}
+
+.profile-form .help {
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.profile-form .button {
+    height: 2.5em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.profile-form .button:hover {
+    transform: translateY(-1px);
+}
+
+.profile-form .button .icon {
+    margin-right: 0.5rem;
+}
+
+.notification {
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.notification .delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive para la página de edición de perfil */
+@media screen and (max-width: 768px) {
+    .profile-edit-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+} 
